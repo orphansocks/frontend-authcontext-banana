@@ -1,11 +1,12 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from "react";
 import NavBar from './components/NavBar';
 import Profile from './pages/Profile';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import './App.css';
+import {Route, Routes} from "react-router-dom";
+
 
 function App() {
   return (

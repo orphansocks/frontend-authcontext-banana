@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import logo from '../assets/banana-01.png';
 import { useNavigate, Link } from 'react-router-dom';
+import { AuthContext } from "../context/AuthContext";
 
 function NavBar() {
   const navigate = useNavigate();
+  const { isAuth, login, logout } = useContext(AuthContext);
 
+  // GEBRUIK USEEFECCT ALLEEN EVEN OM HET EFFECT TE ZIEN VAN DE ISAUTH
+  useEffect(() => {
+    console.log(isAuth)
+  }, [isAuth]);
+
+  // DE BUTTONS USEN/ CONSUMEREN DE LOGIN & LOGOUT CONTEXT VIA USECONTEXT
   return (
     <nav>
         <Link to="/">
@@ -16,20 +24,25 @@ function NavBar() {
           </span>
         </Link>
 
+
       <div>
+        {/*DE LOGIN BUTTON IS ALLEEN ZICHTBAAR ALS ISAUTH FALSE IS*/}
+        { isAuth === false &&
         <button
           type="button"
-          onClick={() => navigate('/signin')}
+          onClick={() => login()}
         >
           Log in
         </button>
+        }
         <button
           type="button"
-          onClick={() => navigate('/signup')}
+          onClick={() => logout()}
         >
           Registreren
         </button>
       </div>
+
     </nav>
   );
 }
