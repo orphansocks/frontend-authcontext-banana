@@ -5,6 +5,8 @@ function Profile() {
   return (
     <>
       <h1>Profielpagina</h1>
+        <p>Deze pagina zie je alleen wanneer je bent ingelogd.</p>
+        <p>Deze pagina is namelijk super geheim</p>
       <section>
         <h2>Gegevens</h2>
         <p><strong>Gebruikersnaam:</strong> hardcoded-test</p>
