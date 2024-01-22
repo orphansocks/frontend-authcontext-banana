@@ -38,7 +38,8 @@ function NavBar() {
           type="button"
           onClick={() => login()}
         >
-            Log in</button>
+            Log in
+        </button>
         }
         {/*DE LOGOUT BUTTON IS ALLEEN ZICHTBAAR ALS ISAUTH TRUE IS*/}
         { isAuth === true &&
@@ -50,6 +51,8 @@ function NavBar() {
         </button>
         }
           {/*DE REGISTREER BUTTON IS ALLEEN ZICHTBAAR ALS ISAUTH FALSE IS*/}
+          {/*DE REGISTREER BUTTON FUNGEERT DIRECT OM TE NAVIGEREN, JE HOEFT HIER GEEN FUNCTIE
+           UIT DE CONTEXT AAN TE ROEPEN ZOALS BIJ LOGIN/LOGOUT*/}
           { isAuth === false &&
         <button
           type="button"
