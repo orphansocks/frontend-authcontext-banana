@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import logo from '../assets/banana-01.png';
 import {Link, useNavigate} from 'react-router-dom';
 import { AuthContext } from "../context/AuthContext";
+import signIn from "../pages/SignIn";
 
 function NavBar() {
   const { isAuth, login, logout } = useContext(AuthContext);
@@ -36,7 +37,7 @@ function NavBar() {
         { isAuth === false &&
         <button
           type="button"
-          onClick={() => login()}
+          onClick={() => navigate('/signin')}
         >
             Log in
         </button>
