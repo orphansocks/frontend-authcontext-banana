@@ -35,6 +35,7 @@ function SignUp() {
                         id="username-field"
                         {...register("username", {
                             required: "username is required",
+
                             minLength: {
                                 value: 6,
                                 message: 'Je gebruikersnaam met tenminste 6 karakters bevatten'
