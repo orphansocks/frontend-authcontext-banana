@@ -34,6 +34,7 @@ function SignIn() {
 
         // HIER KOMT DE CODE WAT JE MET DE SIGNIN GEGEVENS WILT DOEN
         // WANNEER JE EEN REQUEST WILT DOEN HEB JE AXIOS NODIG > NPM INSTALL AXIOS
+
         console.log('Username:', username);
         console.log('Password:', password);
     }

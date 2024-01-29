@@ -55,7 +55,7 @@ function AuthContextProvider({ children }) {
                 })
         }
 
-    }, []);
+    }, []); // USE EFFECT ON MOUNT
 
 
     const navigate = useNavigate();
@@ -115,7 +115,9 @@ function AuthContextProvider({ children }) {
 
     const logout = () => {
         console.log('gebruiker is uitgelogd');
-        // HET AUTHENTICATIE DATA-OBJECT MET IN DIT GEVAL GEEN USER : NULL MEER
+
+        // HET AUTHENTICATIE DATA-OBJECT MET IN DIT GEVAL GEEN USERGEGEVENS : NULL MEER
+
         setAuth ( {
             isAuth: false,
             user: null,
